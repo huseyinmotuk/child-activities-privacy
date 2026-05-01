@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy — Child Activities</title>
-  <meta name="description" content="Privacy Policy for the Child Activities Android app — a COPPA and GDPR-K compliant educational app for children.">
+  <meta name="description" content="Privacy Policy for the Child Activities mobile app (Android and iOS) — a COPPA, GDPR-K, and Apple Kids Category compliant educational app for children.">
   <style>
     :root {
       --fg: #1f2937;
@@ -78,19 +78,22 @@
 <h1>Privacy Policy</h1>
 <p class="meta">
   <strong>Application:</strong> Child Activities<br>
-  <strong>Package:</strong> com.childactivities.app<br>
-  <strong>Effective date:</strong> April 21, 2026<br>
-  <strong>Last updated:</strong> April 21, 2026
+  <strong>Bundle / Package ID:</strong> com.childactivities.app<br>
+  <strong>Platforms:</strong> Android, iOS<br>
+  <strong>Effective date:</strong> May 1, 2026<br>
+  <strong>Last updated:</strong> May 1, 2026
 </p>
 
 <p>
-  Child Activities (the "App") is an educational Android application designed
-  for young children (ages 5 and under). This Privacy Policy explains how the
-  App handles information. The App is built under Google Play's
-  <em>Designed for Families</em> program and is intended to comply with the
-  Children's Online Privacy Protection Act (COPPA) of the United States and
+  Child Activities (the "App") is an educational mobile application available
+  on Android and iOS, designed for young children (ages 5 and under). This
+  Privacy Policy explains how the App handles information. The App is built
+  under Google Play's <em>Designed for Families</em> program and Apple App
+  Store's <em>Kids Category</em>, and is intended to comply with the
+  Children's Online Privacy Protection Act (COPPA) of the United States,
   the General Data Protection Regulation (GDPR), including the provisions
-  relating to children (GDPR-K).
+  relating to children (GDPR-K), and Apple's policies for apps designed
+  primarily for children.
 </p>
 
 <div class="note">
@@ -98,7 +101,8 @@
   personal information from its users. There is no account system, no
   analytics, no crash reporting, and no tracking of any kind. Advertisements
   are served in a child-directed, non-personalized mode, and an optional
-  one-time in-app purchase is handled entirely by Google Play.
+  one-time in-app purchase is handled entirely by the platform's billing
+  system (Google Play Billing on Android, Apple In-App Purchase on iOS).
 </div>
 
 <h2>1. Information We Do <em>Not</em> Collect</h2>
@@ -107,24 +111,29 @@
 </p>
 <ul>
   <li>Personal identifiers (name, email, phone number, address)</li>
-  <li>Precise or approximate location data</li>
+  <li>Precise location data</li>
   <li>Photos, microphone recordings, or camera input</li>
   <li>Contacts, calendar entries, or other on-device content</li>
-  <li>Device advertising identifiers for tracking purposes</li>
+  <li>Device advertising identifiers for cross-app or cross-site
+      tracking purposes</li>
   <li>Behavioral analytics, usage telemetry, or crash reports</li>
   <li>Any data that could be used to identify a child or parent</li>
 </ul>
 <p>
   The App does not contain Firebase Analytics, Firebase Crashlytics, Google
-  Analytics, or any comparable third-party analytics SDK. No account
-  registration is required or offered.
+  Analytics, Apple Analytics, or any comparable third-party analytics SDK.
+  No account registration is required or offered. The iOS version does not
+  request App Tracking Transparency (ATT) authorization because the App
+  performs no tracking as defined by Apple's policy.
 </p>
 
 <h2>2. Information Stored Locally on the Device</h2>
 <p>
   The App stores a small amount of non-personal data on the device itself,
-  using Android's private <code>SharedPreferences</code> storage, solely to
-  make the App work between sessions:
+  using each platform's private storage (Android <code>SharedPreferences</code>,
+  iOS <code>UserDefaults</code>, and <code>flutter_secure_storage</code> backed
+  by Android Keystore / iOS Keychain), solely to make the App work between
+  sessions:
 </p>
 <ul>
   <li>Interface language and learning language selected during onboarding</li>
@@ -132,7 +141,8 @@
   <li>Whether the onboarding flow has been completed</li>
   <li>Quiz progress (last question index per category)</li>
   <li>Whether the optional Quiz Mode + Remove Ads purchase has been made
-      (a local cache of the entitlement returned by Google Play)</li>
+      (a local cache of the entitlement returned by the platform's billing
+      system)</li>
   <li>Coloring canvas thumbnails, stored as local PNG files in the App's
       private storage directory so the child can see their previous work</li>
 </ul>
@@ -154,11 +164,15 @@
 </p>
 <ul>
   <li>Ads are served in a non-personalized mode.</li>
-  <li>Google does not use the Android advertising identifier to build
-      behavioral profiles of users of this App.</li>
+  <li>Google does not use the device's advertising identifier (Android
+      Advertising ID or Apple IDFA) to build behavioral profiles of users
+      of this App.</li>
   <li>Ad content is limited to categories that Google has certified as
-      suitable for children under Google Play's Families policy and the
-      self-certified ad SDK program.</li>
+      suitable for children under Google Play's Families policy, Apple's
+      Kids Category requirements, and the self-certified ad SDK program.</li>
+  <li>On iOS, the App declares the SKAdNetwork identifiers required by
+      AdMob; SKAdNetwork enables privacy-preserving ad attribution
+      without sharing identifiers across apps.</li>
 </ul>
 <p>
   Parents who prefer an ad-free experience can remove all advertisements by
@@ -180,16 +194,19 @@
   across all categories and removes all advertisements from the App.
 </p>
 <p>
-  The purchase is processed entirely by Google Play Billing. We do not see,
-  receive, or store any payment information — card numbers, billing
-  addresses, Google account details, or purchase tokens. The App stores only
-  a local flag indicating whether the entitlement is active, and re-verifies
-  this flag with Google Play each time the App starts.
+  The purchase is processed entirely by the platform's billing system —
+  Google Play Billing on Android, or Apple In-App Purchase (StoreKit) on
+  iOS. We do not see, receive, or store any payment information — card
+  numbers, billing addresses, Google or Apple account details, or purchase
+  tokens. The App stores only a local flag indicating whether the
+  entitlement is active, and re-verifies this flag with the platform's
+  billing system each time the App starts.
 </p>
 <p>
   The purchase option is placed behind a parental gate in the Settings
   screen. It is not reachable from any screen a child would normally use,
-  in line with Google Play's Families policy.
+  in line with both Google Play's Families policy and Apple's Kids
+  Category guidelines.
 </p>
 
 <h2>5. Permissions</h2>
@@ -198,15 +215,19 @@
 </p>
 <ul>
   <li><strong>Internet access</strong> — used solely to load advertisements
-      from Google AdMob. No other network calls are made.</li>
-  <li><strong>Vibration</strong> — used for short haptic feedback when a
-      quiz answer is incorrect. Can be disabled in Settings.</li>
-  <li><strong>Billing</strong> — used only when a parent opens the in-app
-      purchase screen, to communicate with Google Play Billing.</li>
+      from Google AdMob and to validate in-app purchase receipts. No other
+      network calls are made.</li>
+  <li><strong>Vibration</strong> (Android) / <strong>Haptic feedback</strong>
+      (iOS) — used for short feedback when a quiz answer is incorrect. Can
+      be disabled in Settings.</li>
+  <li><strong>Billing / In-App Purchase</strong> — used only when a parent
+      opens the in-app purchase screen, to communicate with Google Play
+      Billing or Apple StoreKit.</li>
 </ul>
 <p>
-  The App does not request access to location, camera, microphone, storage,
-  contacts, or any other sensitive permission.
+  The App does not request access to location, camera, microphone, photos,
+  contacts, calendar, Bluetooth, local network, App Tracking, or any other
+  sensitive permission. The App does not run background tasks.
 </p>
 
 <h2>6. Children's Privacy</h2>
@@ -222,7 +243,15 @@
   <li>We do not serve personalized advertising to child users.</li>
   <li>We do not sell, rent, or share any data with third parties for
       marketing purposes.</li>
+  <li>We do not use any contact details to send communications to
+      children.</li>
 </ul>
+<p>
+  The App is listed under Apple's <strong>Kids Category</strong> and Google
+  Play's <strong>Designed for Families</strong> program. Both programs
+  require explicit compliance with applicable children's privacy laws
+  worldwide.
+</p>
 <p>
   Parents who have questions about their child's use of the App may contact
   us at the email address listed below.
@@ -236,16 +265,19 @@
   progress, coloring thumbnails) can be erased at any time by:
 </p>
 <ul>
-  <li>Clearing the App's storage from Android Settings &rarr; Apps &rarr;
-      Child Activities &rarr; Storage &rarr; Clear storage, or</li>
-  <li>Uninstalling the App.</li>
+  <li><strong>Android:</strong> Settings &rarr; Apps &rarr; Child Activities
+      &rarr; Storage &rarr; Clear storage, or uninstall the App.</li>
+  <li><strong>iOS:</strong> Settings &rarr; General &rarr; iPhone Storage
+      &rarr; Child Activities &rarr; Delete App, or long-press the App icon
+      on the Home Screen and choose Remove App &rarr; Delete App.</li>
 </ul>
 
 <h2>8. Third-Party Services</h2>
 <p>
-  The only third-party service integrated into the App is Google AdMob, used
-  under its child-directed treatment configuration. Google Play Billing is
-  used to process the optional in-app purchase described in Section 4.
+  The only third-party service integrated into the App for advertising is
+  Google AdMob, used under its child-directed treatment configuration. The
+  optional in-app purchase described in Section 4 is processed by Google
+  Play Billing on Android and by Apple In-App Purchase on iOS.
 </p>
 <p>
   Relevant third-party policies:
@@ -259,13 +291,18 @@
       <a href="https://support.google.com/admob/answer/6223431" target="_blank" rel="noopener">
         https://support.google.com/admob/answer/6223431
       </a></li>
+  <li>Apple Privacy Policy:
+      <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">
+        https://www.apple.com/legal/privacy/
+      </a></li>
 </ul>
 
 <h2>9. Changes to This Policy</h2>
 <p>
   If this Privacy Policy changes, the updated version will be posted at this
   same URL with a new "Last updated" date. Material changes will also be
-  reflected in a new version of the App submitted to Google Play.
+  reflected in a new version of the App submitted to Google Play and Apple
+  App Store.
 </p>
 
 <h2>10. Contact</h2>
@@ -274,7 +311,7 @@
   contact:
 </p>
 <p>
-  <strong>Email:</strong> <a href="mailto:mothenox46@gmail.com">mothenox46@gmail.com</a>
+  <strong>Email:</strong> <a href="mailto:hmotuk34@gmail.com">hmotuk34@gmail.com</a>
 </p>
 
 <footer>
